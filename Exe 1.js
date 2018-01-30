@@ -1,5 +1,5 @@
 
-// Test
+// Put comments
 var firstName = prompt("What is Your First Name");
 var lastName = prompt("What is Your Last Name");
 var age = prompt("What is Your Age");
