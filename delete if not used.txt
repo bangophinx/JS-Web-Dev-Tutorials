@@ -1,0 +1,99 @@
+var p1ScoreText = document.querySelector("#p1Score");
+var p1Btn = document.querySelector("button");
+var p2ScoreText = document.querySelector("#p2Score");
+var p2Btn = document.querySelector("#p2Btn");
+var resetBtn = document.querySelector("#reset");
+var final1 = 0;
+var final2 = 0;
+
+var playToScore = document.querySelector("#playTo");
+
+
+for (let i = 0; i < p1Btn.length; i++) {
+  const element = array[i];
+  
+}
+p1Btn.addEventListener("click", p1ScoreChange);
+p2Btn.addEventListener("click", p2ScoreChange);
+
+
+function p1ScoreChange() {
+  if (Number(final1) < Number(playToScore.textContent) && Number(final2) < Number(playToScore.textContent)) {
+    p1ScoreText.textContent = Number(p1ScoreText.textContent) + 1;
+    final1 = Number(p1ScoreText.textContent);
+    console.log("P1Score = " + p1ScoreText.textContent + " Final p1 score = " + final1);
+  }
+  else{
+    p1ScoreText.classList.add("reachedGoal");
+  }
+}
+
+function p2ScoreChange() {
+  if (Number(final1) < Number(playToScore.textContent) && Number(final2) < Number(playToScore.textContent)) {
+    p2ScoreText.textContent = Number(p2ScoreText.textContent) + 1;
+    final2 = Number(p2ScoreText.textContent);
+    console.log("P2Score = " + p2ScoreText.textContent + " Final p2 score = " + final2);
+  }
+  else{
+    p2ScoreText.classList.add("reachedGoal");
+  }
+}
+
+// function p1ScoreChange() {
+//   if (Number(final1) < Number(playToScore.textContent) && Number(final2) < Number(playToScore.textContent)) {
+//     p1ScoreText.textContent = Number(p1ScoreText.textContent) + 1;
+//     final1 = Number(p1ScoreText.textContent);
+//     console.log("P1Score = " + p1ScoreText.textContent + " Final p1 score = " + final1);
+//   }
+//   else{
+//     p1ScoreText.classList.add("reachedGoal");
+//   }
+// }
+
+// function p2ScoreChange() {
+//   if (Number(final1) < Number(playToScore.textContent) && Number(final2) < Number(playToScore.textContent)) {
+//     p2ScoreText.textContent = Number(p2ScoreText.textContent) + 1;
+//     final2 = Number(p2ScoreText.textContent);
+//     console.log("P2Score = " + p2ScoreText.textContent + " Final p2 score = " + final2);
+//   }
+//   else{
+//     p2ScoreText.classList.add("reachedGoal");
+//   }
+// }
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Score Keeper Project</title>
+	<link rel="stylesheet" href="Exe 12.css">
+</head>
+
+<body>
+	<div class="pScore">0</div>
+	<div id="vs">to</div>
+	<div class="pScore">0</div>
+
+	<br>
+	<span>Playing to:</span>
+	<span id="playTo">5</span>
+
+	<form>
+		<input type="text" name="playToChange" id="playToChange">
+		<input type="button" value="Player 1" id="p1Btn">
+		<input type="button" value="Player 2" id="p2Btn">
+		<input type="submit" value="Reset" id="reset">
+	</form>
+
+	<script src="Exe 12.js"></script>
+</body>
+
+</html>
+
+
+
+
+

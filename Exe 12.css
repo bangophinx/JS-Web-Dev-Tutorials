@@ -1,0 +1,19 @@
+div {
+  display: inline;
+  font-size: 3em;
+  font-weight: 500;
+  padding: 2px;
+}
+
+button {
+  margin:10px 0 0 0;
+  margin-bottom: 10px;
+}
+
+.reachedGoal{
+  color: green;
+}
+
+.clicked{
+  background-color: rgb(151, 60, 90);
+}
